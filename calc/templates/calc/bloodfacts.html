@@ -1,0 +1,220 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Facts</title>
+    <style>body{
+        margin:0px;
+        
+    }
+    #header{
+        background-color: #E11B22;
+        color:white;
+        text-align:center;
+        margin:0px;
+        padding:0px;
+        height:100px;
+        border-radius:5px;
+    }
+   h2{
+        padding-top:20px;
+        font-size:50px
+    }
+    #navbar{
+        background-color: #f50703;
+    height:60px;
+    padding-top:20px;
+    }
+    #navbar ul{
+        list-style-type:none;
+        text-align: center;
+       
+    }
+    #navbar ul li{
+        display:inline;
+    }
+    #navbar ul li a{
+        text-decoration:none;
+        background-color:#f50703;
+        color:white;
+        margin-right:80px;
+        text-transform:capitalize;
+        padding:5px;
+        border-radius: 5px;
+    }
+    #navbar ul li a:hover{
+        background-color: #E11B22;
+        color:white;
+    }
+    .image img{
+        width:100%;
+        height: 515px;
+    }
+    #searchimage img{
+        margin-top:10px;
+        margin-left:40%;
+    }
+    #searchform{
+     text-align: center;
+     color:blue;
+    }
+    #searchform select option{
+    color: blue;
+    }
+    #table h2{
+        text-align: center;
+        color:blue;
+    }
+    #donarform{
+    color:blue;
+    padding-left:100px;
+    padding-right:100px;
+    display:table;
+    border:solid 2px blue;
+    border-radius:5px;
+    margin-left:30%;
+    }
+    .row{
+        display:table-row;
+    }
+    .row label{
+        display:table-cell;
+        padding:2px;
+        text-align: left;
+    }
+    .row input{
+        display:table-cell;
+        padding:2px;
+    }
+    .row select{
+        display:table-cell;
+        padding:2px;
+    }
+    .row textarea{
+        display:table-cell;
+        padding:2px;
+    }
+ #boxes{
+    margin-top:20px;
+  }
+
+  #boxes .box{
+    float:left;
+    text-align: center;
+    width:30%;
+    padding:10px;
+  }
+
+  #boxes .box img{
+    width:90px;
+  }
+    
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h2>Blood Bank Management System</h2>
+        </div>
+    
+        <div id="navbar">
+            <ul>
+                <li><a href="{% url 'patienthome' %}">home</a></li>
+                <li><a href="{% url 'bloodfacts' %}">bloodfacts</a></li>
+                <li><a href="{% url 'search' %}">search</a></li>
+                <li><a href="{% url 'pregistration' %}">patient registration</a></li>
+                <li><a href="{% url 'pservices' %}">services</a></li>
+                <li><a href="{% url 'logout' %}">logout</a></li>
+                </ul>
+        </div>
+        <div style="padding-left: 400px;"> 
+            <br>
+        <h3 style="color:#E11B22">Compatibility</h3>
+        <p>Everyone who is eligible can donate blood, but depending on your blood type, you're only able to receive certain types of blood, plasma or platelets.</p>
+    <br>
+        <h4 style="color:#E11B22">Whole Blood</h4>
+    <p>There are eight different blood types, and they're not always compatible with each other. Interestingly, people who have O-negative blood are considered universal donors for the entire population.</p>
+      <br>  
+    <img src="https://competitiveindia.com/wp-content/uploads/2019/02/blood-group-1200x720.jpg" height="500" width="700">
+    <br><br><br>
+    <h3 style="color:#E11B22">Why Your Donation Matters</h3>
+    <br>
+    <p>There are no substitutes for blood, platelets or plasma—they cannot be manufactured. Patients in need of blood or blood products must rely on donations from people like you. Those who are hesitant about donating blood for the first time often find that the donation process is easy and that saving lives is deeply gratifying.
+        <br>
+        One donation can save multiple lives. Here are the facts:
+        <br>
+        <ul>
+        <li>Just 1 donation can save up to 3 lives.</li>
+        <li>The average red blood cell transfusion is 3 pints (or 3 whole-blood donations).</li>
+        <li> More than 1 million people every year are diagnosed with cancer for the first time. Many of them will need blood—sometimes daily—during chemotherapy.</li>
+        <li>More than 38,000 blood donations are needed every day.</li>
+        <li>Type O-negative whole blood can be transfused to people with any blood type, but this type of blood is rare, and supplies of it are low.</li>
+        <li>Type AB plasma can be transfused to patients with all other blood types, but it's also in short supply.</li>
+        <li>While 38% of the American population is eligible to give blood, only 2% actually donates.</li></p>
+    </ul>
+    
+    <div>
+        <h3 style="color:#E11B22">Types of Donation</h3>
+        <p>There are many ways you can make a difference and save lives. Our team members will help identify which type of donation is best for you, based on your blood type and the immediate need for blood or blood products.</p>
+        <h4 style="color:#E11B22">1.Whole blood</h4>
+        <ul>
+            <li>Whole blood is the most common type of donation.</li>
+                <li>Blood from one donation can be divided into two components: red blood cells and plasma.</li>
+                    <li>The average adult has about 10 pints of blood, but a typical whole-blood donation is only 1 pint.</li>
+                        <li>Red blood cells have a short shelf life. They only last for 6 weeks (42 days).</li>
+                            <li>Donating whole blood takes only about 10-15 minutes.</li>
+                                <li>You can donate whole blood every 56 days—and we encourage you to donate as often as possible.</li>
+        </ul>
+        <h4 style="color:#E11B22">2.Platelets</h4>
+        <ul>
+            <li> Platelets are small, disc-shaped cells that aid in blood clotting.</li>
+                <li>They are donated most often to cancer patients, organ recipients and those undergoing heart surgeries.</li>
+                    <li>Patients who need platelets often require multiple transfusions. That's why it's so important to donate as often as you can.</li>
+                        <li>Platelets do not last long. They have a shelf life of just 5 days.</li>
+                            <li>Those who have A, A-negative, B, B-negative, AB or AB-negative blood types are strongly encouraged to donate platelets.</li>
+                                <li>Donors are connected to a machine that separates platelets and some plasma from the blood and returns the red cells (and most of the plasma) back to the donor.</li>
+                                    <li>Donating platelets takes approximately 90 minutes.</li>
+                                        <li>You can donate platelets every 7 days, up to 24 times a year.</li>
+</ul>
+
+<h4 style="color:#E11B22">3.Plasma</h4>
+<ul>
+<li>Plasma is the light yellow liquid in your blood that makes up 50% of total blood volume. It contains proteins that help control bleeding and fight infections.</li>
+<li>It's used to treat various types of bleeding disorders. It's also given to patients who have suffered major traumatic injuries.</li>
+    <li>Plasma can be frozen for up to a year.</li>
+        <li>If you have type AB blood, you are a universal plasma donor.</li>
+            <li>People who have blood types AB, AB-negative, A, A-negative, B or B-negative also are ideal donors for platelets.</li>
+                <li>Donors are connected to a machine that separates out plasma and returns red cells to the body.</li>
+                    <li>Plasma donation takes about 40 minutes.</li>
+                        <li>You may donate plasma every 28 days.</li>
+</ul>
+    </div>
+    <h4 style="color:#E11B22">4.Double Red Cells</h4>
+    <ul>
+        <li>Red blood cells are the most commonly transfused blood component.</li>
+            <li>Donors are hooked up to a machine that collects the red cells and returns most of the plasma and platelets to the body.</li>
+                <li>Donations from type O donors are crucial to maintaining blood levels in the body.</li>
+                    <li>Double red-cell donors with type O, O-negative, B or B-negative types, as well as donors with Rh-negative blood are in short supply.</li>
+                        <li>You must meet higher hemoglobin and height-to-weight requirements to donate double red cells.</li>
+                            <li>Double red cell donations take approximately 40 minutes.</li>
+                                <li>You can donate double red blood cells once every 16 weeks (112 days).</li>
+    </ul>
+    <h4 style="color:#E11B22">5.Donating for yourself</h4>
+    <ul><li>Donating blood for your own elective surgery requires that an order from your doctor be faxed to the Blood Donor Services team at 310-423-0174.</li>
+        <li> Your most recent donation must have been made at least 5 days before your scheduled procedure.</li>
+            <li>For more information, call 310-423-4170.</li></ul>
+
+            <h4 style="color:#E11B22">6.Donating for someone else</h4>
+    <ul>
+        <li>Friends and family members can donate blood for their loved ones.</li>
+            <li> Directed donations should be scheduled no later than 7 business days before the patient's blood transfusion.</li>
+                <li>To arrange a directed donation, the patient's attending physician should contact the Blood Donor Services team at 310-423-2414.</li>
+                    <li>To schedule an appointment, call 310-423-4170.</li>
+                        <li>If you've already donated for a particular patient and want to know if your donation is suitable for the intended recipient, call 310-423-5417.</li></ul>
+   
+    </div>                 
+</body>
+
+</html>

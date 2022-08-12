@@ -1,0 +1,267 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Tips</title>
+    <style>body{
+        margin:0px;
+        
+    }
+    #header{
+        background-color: #E11B22;
+        color:white;
+        text-align:center;
+        margin:0px;
+        padding:0px;
+        height:100px;
+        border-radius:5px;
+    }
+   h2{
+        padding-top:20px;
+        font-size:50px
+    }
+    #navbar{
+        background-color: #f50703;
+    height:60px;
+    padding-top:20px;
+    }
+    #navbar ul{
+        list-style-type:none;
+        text-align: center;
+       
+    }
+    #navbar ul li{
+        display:inline;
+    }
+    #navbar ul li a{
+        text-decoration:none;
+        background-color:#f50703;
+        color:white;
+        margin-right:80px;
+        text-transform:capitalize;
+        padding:5px;
+        border-radius: 5px;
+    }
+    #navbar ul li a:hover{
+        background-color: #E11B22;
+        color:white;
+    }
+    .image img{
+        width:100%;
+        height: 515px;
+    }
+    #searchimage img{
+        margin-top:10px;
+        margin-left:40%;
+    }
+    #searchform{
+     text-align: center;
+     color:blue;
+    }
+    #searchform select option{
+    color: blue;
+    }
+    #table h2{
+        text-align: center;
+        color:blue;
+    }
+    #donarform{
+    color:blue;
+    padding-left:100px;
+    padding-right:100px;
+    display:table;
+    border:solid 2px blue;
+    border-radius:5px;
+    margin-left:30%;
+    }
+    .row{
+        display:table-row;
+    }
+    .row label{
+        display:table-cell;
+        padding:2px;
+        text-align: left;
+    }
+    .row input{
+        display:table-cell;
+        padding:2px;
+    }
+    .row select{
+        display:table-cell;
+        padding:2px;
+    }
+    .row textarea{
+        display:table-cell;
+        padding:2px;
+    }
+ #boxes{
+    margin-top:20px;
+  }
+
+  #boxes .box{
+    float:left;
+    text-align: center;
+    width:30%;
+    padding:10px;
+  }
+
+  #boxes .box img{
+    width:90px;
+  }
+    
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h2>Blood Bank Management System</h2>
+        </div>
+
+        <div id="navbar">
+            <ul>
+                
+                <li><a href="{% url 'donarhome' %}">home</a></li>
+                <li><a href="{% url 'bloodtips' %}">bloodtips</a></li>
+                <li><a href="{% url 'dsearch' %}">search</a></li>
+                <li><a href="{% url 'donar' %}">donar registration</a></li>
+                <li><a href="{% url 'services' %}">services</a></li>
+                <li><a href="{% url 'logout' %}">logout</a></li>
+            </ul>
+        </div>
+<br>
+<br>
+<h1 style="text-align:center;color:#E11B22">Before Donation</h1>
+     <section id="boxes">
+           <div class="container">
+               <div class="box">
+                   <img src="https://www.redcrossblood.org/content/dam/redcrossblood/rcb/icons-and-badges/tips-appointment.png.img.png">
+               <h3>Make an Appointment</h3>
+               <p> Select a donation type and find a convenient time that works best for you.</p>
+               </div>
+
+
+               <div class="box">
+                    <img src="https://www.redcrossblood.org/content/dam/redcrossblood/rcb/icons-and-badges/tips-iron-food.png.transform/282/q70/feature/image.png">
+                   <h3>Get the Dish on Nutrition</h3>
+                    <p>Have iron-rich foods, such as red meat, fish, poultry, beans, spinach, iron-fortified cereals or raisins. </p>
+                    </div>
+
+
+
+                    <div class="box">
+                    <img src="https://www.redcrossblood.org/content/dam/redcrossblood/rcb/icons-and-badges/good-nights-sleep.png.transform/282/q70/feature/image.png">
+                    <h3>Be Well Rested and Hydrate</h3>
+                            <p>Get a good night's sleep the night before your donation, eat healthy foods and drink extra liquids.</p>
+                            </div>
+                        </div>
+      </section>
+<div style="text-align:center">
+<br><br><br><br><br><br><br><br><br><br>
+<h2 style="font-size:30px">Additional tips before donating:</h2>
+<ul style="text-align:left;padding-left:400px">
+ <li>Donating Platelets? Don't take aspirin for 2 days before your appointment. Learn About Platelet Donations.</li>
+<li>Ask a friend to donate at the same time . You can support each other and do twice as much good!</li>
+<li>Download the Blood Donor App to receive appointment reminders, start your RapidPass and more.</li>
+</ul>
+</div>     
+<br>
+<br>
+<hr>
+<br>
+<br>
+<h1 style="text-align:center;color:#E11B22">On the Day of Your Donation</h1>
+     <section id="boxes">
+           <div class="container">
+               <div class="box">
+                   <img src="https://www.redcrossblood.org/content/dam/redcrossblood/rcb/icons-and-badges/tips-rapidpass.png.transform/282/q70/feature/image.png">
+               <h3>RapidPass®</h3>
+               <p> To expedite your donation, start your RapidPass® on the day of your appointment.</p>
+               </div>
+
+
+               <div class="box">
+                    <img src="https://www.redcrossblood.org/content/dam/redcrossblood/rcb/icons-and-badges/tips-photo-id.png.img.png">
+                   <h3>Photo ID</h3>
+                    <p>Please bring your donor card, driver's license or two other forms of identification. </p>
+                    </div>
+
+
+
+                    <div class="box">
+                    <img src="https://www.redcrossblood.org/content/dam/redcrossblood/rcb/icons-and-badges/tips-medication-list.png.img.png">
+                    <h3>Medication List</h3>
+                            <p>We'll need to know about all prescription and over-the-counter medications you're taking.</p>
+                            </div>
+                        </div>
+      </section>
+<div style="text-align:center">
+<br><br><br><br><br><br><br><br><br><br>
+<h2 style="font-size:30px">Additional tips for the day of your donation:</h2>
+<ul style="text-align:left;padding-left:400px">
+ <li>Drink an extra 16 oz. of water (or other nonalcoholic drink) before your appointment.</li>
+<li>Eat a healthy meal, avoiding fatty foods like hamburgers, fries or ice cream.</li>
+<li>Wear a shirt with sleeves that you can roll up above your elbows.</li>
+<li>Let us know if you have a preferred arm or particular vein that has been used successfully in the past to draw blood.</li>
+<li>Relax, listen to music, talk to other donors or read while you donate.</li>
+</ul>
+</div> 
+
+
+
+
+
+
+    
+<br>
+<br>
+<hr>
+<br>
+<br>
+<h1 style="text-align:center;color:#E11B22">After Your Donation</h1>
+     <section id="boxes">
+           <div class="container">
+               <div class="box">
+                   <img src="https://www.redcrossblood.org/content/dam/redcrossblood/rcb/icons-and-badges/cookie-snack.png.img.png">
+               <h3>Enjoy a Snack</h3>
+               <p> Relax for a few minutes in our refreshment & recovery area — have some cookies or other snacks — you’ve earned it!</p>
+               </div>
+
+
+               <div class="box">
+                    <img src="https://www.redcrossblood.org/content/dam/redcrossblood/rcb/icons-and-badges/tips-tell-others.svg">
+                   <h3>Tell Others About Your Good Deed</h3>
+                    <p>The gratification of giving blood is a feeling you'll want to share.</p>
+                    </div>
+
+
+
+                    <div class="box">
+                    <img src="https://www.redcrossblood.org/content/dam/redcrossblood/rcb/icons-and-badges/glass-water.png.img.png">
+                    <h3>Drink Extra Liquids</h3>
+                            <p>Drink an extra four (8 oz.) glasses of liquids and avoid alcohol over the next 24 hours.</p>
+                            </div>
+                        </div>
+      </section>
+<div style="text-align:center">
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<h2 style="text-align:left;padding-left:450px;font-size:30px">Additional tips for after your donation:</h2>
+<ul style="text-align:left;padding-left:300px">
+ <li>Keep the strip bandage on for the next several hours; to avoid a skin rash, clean the area around the bandage with soap and water.</li>
+<li>Don’t do any heavy lifting or vigorous exercise for the rest of the day.</li>
+<li>If the needle site starts to bleed, apply pressure and raise your arm straight up for 5-10 minutes or until bleeding stops.</li>
+<li>Call us at 1-866-236-3276 to report any additional health information that you forgot to tell us, if you have any problems or if you needed medical care after giving blood.</li>
+<li>If you experience dizziness or lightheadedness, stop what you’re doing and sit down or lie down until you feel better; avoid performing any activity where fainting may lead to injury for at least 24 hours.</li>
+<li>Keep eating iron-rich foods.</li>
+<li>If you donate frequently, be sure to take multivitamins with iron to ensure you continue to replenish your iron stores before your next donation.</li>
+</ul>
+</div>     
+    
+</body>
+</html>
+
+
+
+
+
